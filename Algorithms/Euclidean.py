@@ -9,13 +9,22 @@
 # 	else:
 # 		return max(x,y)
 	
-# Professors implementation
+# Professors implementation - gcd_sub
+# def gcd(x, y):
+# 	while x != 0 and y != 0:
+# 		if x > y:
+# 			x = x-y
+# 		else:
+# 			y = y-x
+# 	return x + y
+
+# Professors implementation - gcd_mod
 def gcd(x, y):
 	while x != 0 and y != 0:
 		if x > y:
-			x = x-y
+			x = x % y
 		else:
-			y = y-x
+			y = y % x
 	return x + y
-
-print(gcd(8, 3))
+	
+print(gcd(32, 77))
